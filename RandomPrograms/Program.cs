@@ -200,8 +200,6 @@ namespace temp
                     common++;
             }
 
-            //common = common > 0 ? common : 1;
-
             return common == 0 ? Factorial(total) : Factorial(total) / (Factorial(common) * Factorial(total - common));
 
         }
@@ -216,8 +214,6 @@ namespace temp
 
         public static List<int> getOneBits(int n)
         {
-            //int pos = 31;
-            //int[] b = new int[32];
             int i = 0;
             int max = 0;
             List<int> list = new List<int>();
@@ -229,15 +225,10 @@ namespace temp
                     list.Add(i);
                     max = i + 1;
                 }
-                //else
-                //   b[pos] = 0;
 
-                //pos--;
                 i++;
-                ///max++;
             }
 
-            //Array.Reverse(b);
             for (int j = 0; j < list.Count; j++)
             {
                 list[j] = max - list[j];
@@ -287,51 +278,6 @@ namespace temp
             }
 
             return list.ToArray();
-        }
-
-        static string[] braces(string[] values)
-        {
-            Stack<char> st = new Stack<char>();
-            int n = values.Length;
-            string[] responseCount = new string[n];
-            bool matched = true;
-            for (int j = 0; j < n; j++)
-            {
-                var item = values[j];
-                for (int i = 0; i < item.Length; i++)
-                {
-                    if (item[i] == '(' || item[i] == '{' || item[i] == '[')
-                    {
-                        st.Push(item[i]);
-                    }
-                    else
-                    {
-                        if (st.Count == 0)
-                        {
-                            matched = false;
-                            break;
-                        }
-
-                        var poppedItem = st.Pop();
-                        if ((item[i] == ')' && poppedItem == '(') || (item[i] == '}' && poppedItem == '{')
-                          || (item[i] == ']' && poppedItem == '['))
-                        {
-                            continue;
-                        }
-
-                        matched = false;
-                        break;
-                    }
-                }
-
-                if (matched)
-                    responseCount[j] = "YES";
-                else
-                    responseCount[j] = "NO";
-
-            }
-
-            return responseCount;
-        }
+        }     
     }
 }
