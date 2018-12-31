@@ -5,7 +5,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace temp
+namespace RandomPrograms
 {
     class Program
     {
@@ -47,27 +47,32 @@ namespace temp
             #endregion
 
             #region missing alphabet
-            char[] str = new char[] { 'Q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'z', 'x', 'c', 'v', 'b', 'n' };
-            bool[] present = new bool[26];
-            for (int i = 0; i < str.Length; i++)
-            {
-                if (str[i] >= 'a' && str[i] <= 'z')
-                    present[str[i] - 'a'] = true;
-                else if (str[i] >= 'A' && str[i] <= 'Z')
-                    present[str[i] - 'A'] = true;
-            }
+            //char[] str = new char[] { 'Q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'z', 'x', 'c', 'v', 'b', 'n' };
+            //bool[] present = new bool[26];
+            //for (int i = 0; i < str.Length; i++)
+            //{
+            //    if (str[i] >= 'a' && str[i] <= 'z')
+            //        present[str[i] - 'a'] = true;
+            //    else if (str[i] >= 'A' && str[i] <= 'Z')
+            //        present[str[i] - 'A'] = true;
+            //}
 
-            for (int i = 0; i < present.Length; i++)
-            {
-                if (present[i] == false)
-                {
-                    char c = Convert.ToChar('a' + i);
-                    Console.WriteLine(c);
-                    break;
-                }
-            }
-            Console.WriteLine();
+            //for (int i = 0; i < present.Length; i++)
+            //{
+            //    if (present[i] == false)
+            //    {
+            //        char c = Convert.ToChar('a' + i);
+            //        Console.WriteLine(c);
+            //        break;
+            //    }
+            //}
+            //Console.WriteLine();
             #endregion
+
+            #region Min Max Riddle
+            Console.WriteLine(string.Join(" ", MinMaxRiddle.riddle(new long[] { 1, 2, 3, 5, 1, 13, 3 })));
+            #endregion
+
             Console.Read();
 
         }
@@ -278,6 +283,6 @@ namespace temp
             }
 
             return list.ToArray();
-        }     
+        }
     }
 }

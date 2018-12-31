@@ -43,6 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MaxPriorityQueue.cs" />
+    <Compile Include="MinIndexedPriorityQueue.cs" />
+    <Compile Include="MinMaxRiddle.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
