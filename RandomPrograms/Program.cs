@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using temp;
 
 namespace RandomPrograms
 {
@@ -70,7 +71,12 @@ namespace RandomPrograms
             #endregion
 
             #region Min Max Riddle
-            Console.WriteLine(string.Join(" ", MinMaxRiddle.riddle(new long[] { 1, 2, 3, 5, 1, 13, 3 })));
+            //Console.WriteLine(string.Join(" ", MinMaxRiddle.riddle(new long[] { 2, 6, 1, 12 })));
+            #endregion
+
+            #region poisonous plants            
+            Console.WriteLine(PoisonousPlants.poisonousPlants(new int[] { 6, 5, 8, 4, 7, 10, 9 }));
+
             #endregion
 
             Console.Read();
